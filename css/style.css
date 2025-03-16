@@ -1,0 +1,356 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #000, #333);
+    color: #fff;
+    padding: 1.5em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;  
+    top: 0;            
+    z-index: 999;      
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 60px;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+header .logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+header nav {
+    flex: 1 1 300px;
+    text-align: right;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li {
+    display: inline-block;
+    margin-left: 1em;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em 0.8em;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+header nav ul li a:hover,
+header nav ul li a:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* BOTONES (Global) */
+button, .btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover, .btn:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+/* ENLACES (Global) */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #005fa3;
+}
+
+/* FORMULARIOS (Estilo Ligero) */
+.formulario,
+.formulario-login,
+.formulario-registro,
+.formulario-admin,
+footer form {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde claro */
+    border-radius: 5px;
+    padding: 1.5em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* Sombra sutil */
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+.formulario h2,
+.formulario-login h2,
+.formulario-registro h2,
+.formulario-admin h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #444;
+}
+
+.formulario label,
+.formulario-login label,
+.formulario-registro label,
+.formulario-admin label,
+footer form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="number"],
+.formulario textarea,
+.formulario select,
+.formulario-login input[type="text"],
+.formulario-login input[type="email"],
+.formulario-login input[type="password"],
+.formulario-login input[type="number"],
+.formulario-login textarea,
+.formulario-login select,
+.formulario-registro input[type="text"],
+.formulario-registro input[type="email"],
+.formulario-registro input[type="password"],
+.formulario-registro input[type="number"],
+.formulario-registro textarea,
+.formulario-registro select,
+.formulario-admin input[type="text"],
+.formulario-admin input[type="email"],
+.formulario-admin input[type="password"],
+.formulario-admin input[type="number"],
+.formulario-admin textarea,
+.formulario-admin select,
+footer form input,
+footer form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+}
+
+.formulario button,
+.formulario-login button,
+.formulario-registro button,
+.formulario-admin button,
+footer form button {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario button:hover,
+.formulario-login button:hover,
+.formulario-registro button:hover,
+.formulario-admin button:hover,
+footer form button:hover {
+    background-color: #0055aa;
+    transform: scale(1.02);
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+}
+footer form {
+    max-width: 400px;
+    margin: 0 auto 1em;
+    padding: 1em;
+    background-color: #444;
+    border-radius: 5px;
+}
+footer form input,
+footer form textarea {
+    background: #555;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+/* VIDEO DE FONDO */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+#video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.texto-superpuesto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* BARRA DE BÚSQUEDA */
+.form-busqueda {
+    display: flex;
+    justify-content: center;
+    margin: 1.5em 0;
+    width: 100%;
+}
+.form-busqueda input[type="text"] {
+    width: 500px;
+    max-width: 600px;
+    padding: 1em;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.form-busqueda input[type="text"]:focus {
+    border-color: #000;
+}
+.form-busqueda button {
+    padding: 1em 1.5em;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.form-busqueda button:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* GRID DE PRODUCTOS */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1em;
+    margin: 1em;
+}
+.producto-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+.producto-item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.producto-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+/* DETALLES DE PRODUCTO */
+.producto-detalle {
+    max-width: 600px;
+    margin: 2em auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+}
+
+/* TABLAS */
+table {
+    width: 90%;
+    margin: 1em auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+    text-align: center;
+}
+table th {
+    background: #f5f5f5;
+}
+
+/* ADMIN PANEL */
+.admin-header {
+    text-align: center;
+    margin: 1em auto;
+    font-size: 2rem;
+}
+.admin-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+.admin-nav a {
+    background: #000;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.admin-nav a:hover {
+    background: #333;
+}
